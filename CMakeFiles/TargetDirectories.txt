@@ -1,0 +1,1 @@
+/home/kizontech/Image Processing/CMakeFiles/image.dir

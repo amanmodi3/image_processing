@@ -1,0 +1,31 @@
+#include <opencv2/core/core.hpp>
+#include <opencv2/highgui/highgui.hpp>
+#include <iostream>
+
+using namespace std;
+using namespace cv;
+
+int main()
+{
+	Mat image=imread("/home/image2.png",1);
+	Mat image1(187,300,CV_8UC3,Scalar(0,0,0));
+	for(int i=0;i<image.rows;i++)
+	{
+		for(int j=0;j<image.cols;j++)
+			{
+				//if(image.at<Vec3b>(i,j)[2]>200 && image.at<Vec3b>(i,j)[1]<70 && image.at<Vec3b>(i,j)[0]<70)
+				
+
+
+					image1.at<Vec3b>(i,j)=1.5*(image.at<Vec3b>(i,j));
+					
+				
+			}
+	}
+	imshow("ubuntu logo",image);
+	imshow("Nilay",image1);
+	cout<<image.rows<<endl;
+	cout<<image.cols<<endl;
+	waitKey(0);
+	return 0;
+}
